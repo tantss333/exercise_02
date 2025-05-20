@@ -35,7 +35,7 @@ MessageApp/                      # root folder
 
 ## IDE Platform for Coding: Android Studio
 
-## Github Url: https://github.com/tantss333/exercise_01.git
+## Github Url: https://github.com/tantss333/exercise_02.git
 
 
 ## 📲 How to Install and Run the App
