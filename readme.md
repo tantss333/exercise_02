@@ -1,6 +1,6 @@
 # React Native Message App Demo 
 
-This is a mobile message demo application built with **React Native**.  
+This is a mobile message demo application built with **React Native** and **TypeScript**.  
 It demonstrates directories, messages, messages management.
 
 ---
@@ -40,72 +40,93 @@ MessageApp/                      # root folder
 
 ## 📲 How to Install and Run the App
 
-1. **Install Flutter SDK**  
-   - [Flutter installation guide](https://flutter.dev/docs/get-started/install)
+1. **Make sure you have Node.js and Expo CLI:**  
+   - install nodeJs (https://nodejs.org/en/download)
+   - install expo :
+         **npm install -g expo-cli**
+
 
 2. **Clone this repository:**
    ```
-   git clone https://github.com/tantss333/exercise_01.git
-   cd exercise_01
+   git clone https://github.com/tantss333/exercise_02.git
+   cd exercise_02
    ``` 
 
 3. **Install dependencies:**
    ```bash
-   flutter pub get
+   npm install
+
    ```
 
-4. **Run the app:**
-   - Be sure that load the project from the root folder, for example: **exercise_01**
+4. **Install Expo Navigation and AsyncStorage if not installed yet**
+
+```bash
+
+ npx expo install @react-navigation/native
+
+ npx expo install @react-navigation/native-stack
+
+ npx expo install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated
+
+ npx expo install @react-native-async-storage/async-storage
+
+```
+
+
+5. **▶️ Running the App**
+   - Be sure that load the project from the root folder, for example: **exercise_02**
 
    - Be sure you **connect your mobile device**(either virtual or practical) in IDE
 
-   - In **Android Studio**: click ▶️ next to `main.dart`
-
-   - In **Intellij**: click ▶️ next to `main.dart`
-
-   - Or via terminal:
+   - via terminal:
      ```bash
-     flutter run
+     npx expo start
      ```
 
-5. **To test on Chrome:**
-   ```bash
-   flutter config --enable-web
-   flutter devices
-   flutter run -d chrome
-   ```
+6. **To test**
+   
+   Follow the instructions showed on the terminal:
+
+   - Press **w** to open in a Web browser
+   - Press **a** to open in Android device
+   - Or **scan the QR code** using the **Expo Go App** on your mobile device
+   
 
 ---
 
 ## 🖼 Screenshots
 
 
-| ![Welcome](screenshots/welcome_screen.png) | ![Main](screenshots/main_screen.png) |
+| ![Welcome](screenshots/main.png) | ![Main](screenshots/messagelist.png) |
 |:--:|:--:|
-| Welcome Page | Main Page |
+| Main Page | Message List Page |
 
-| ![Detail](screenshots/product_screen.png) | ![Cart](screenshots/cart_screen.png) |
-|:--:|:--:|
-| Product Details | Cart Page |
+| ![Detail](screenshots/function.png) | 
+|:--:
+| Message Function (**mark, delete, add**)
 
 ---
 
 ## ✅ Features Implemented
 
-- 🏠 Welcome screen with navigation
-- 🛍 Product listing with image + price
-- 📦 Detail screen with size selection + validation
-- 🛒 Cart screen with:
-  - Total price + item count
-  - Multi-select checkboxes
-  - Delete item
-  - "Checkout selected" button (only button)
+📁 Category Browsing	6 predefined categories: Family, Work, School, Friends, Travel and Finance.
+
+📄 Message Listing	Each category holds its own independent message set.
+
+✅ Mark as Read / All Read	Toggle single read state or mark all as read at once.
+
+🗑️ Delete Messages	Tap delete to remove messages (with confirm on Web).
+
+🔍 Search Bar	Real-time filtering of visible messages.
+
+➕ Add New Messages	Input box at bottom to add and store new messages.
+
+💾 Local Persistence	Messages and read status stored locally using AsyncStorage
 
 ---
 
 ## ⚠ Notes
 
-- Make sure assets are declared in `pubspec.yaml` (e.g. `resource/images/`)
 - If you're using a custom folder like `assets/`, update image paths accordingly
 
 ---
